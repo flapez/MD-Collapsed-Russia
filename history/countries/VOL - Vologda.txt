@@ -71,10 +71,10 @@ capital = 646
 	set_variable = { subjectinped = 3 }
 
 	set_popularities = {
-		democratic = 7.0
-		communism = 80.0
-		neutrality = 3.0
-		nationalist = 13.0
+		democratic = 0.45
+		communism = 0.25
+		neutrality = 0.00
+		nationalist = 0.30
 	}
 	set_politics = {
 		ruling_party = communism
