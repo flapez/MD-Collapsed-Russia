@@ -3,5 +3,5 @@ tags={
 	"Utilities"
 }
 name="MD: Collapsed Russia"
-supported_version="1.17.x"
+supported_version="1.17.*"
 dependencies= { "Millennium Dawn: A Modern Day Mod" }
