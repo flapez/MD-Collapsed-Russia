@@ -73,9 +73,8 @@ capital = 646
 	set_popularities = {
 		democratic = 7.0
 		communism = 80.0
-		fascism = 0.0
 		neutrality = 3.0
-		nationalist = 10.0
+		nationalist = 13.0
 	}
 	set_politics = {
 		ruling_party = communism
