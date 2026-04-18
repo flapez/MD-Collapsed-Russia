@@ -48,9 +48,6 @@ capital = 646
 		#Start
 		vol_destroyed_economy_5start
 		vol_disorganized_military_5start
-		vol_isolated_economy
-		vol_veteran_unrest
-		vol_administrative_chaos
 }
 	}
 
