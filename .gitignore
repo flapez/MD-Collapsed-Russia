@@ -1,3 +1,5 @@
-Since the only files in the change list are `.gitignore` and `README.md` (both source/config files), and there are no build artifacts, dependencies, or temporary files present, no additional ignore rules are needed.
-
-(empty - output nothing)
+```
+# Localisation temp/backup files
+localisation/rusisan/*.tmp
+localisation/rusisan/*~
+```
