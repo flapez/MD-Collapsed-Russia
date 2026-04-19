@@ -1,528 +1,465 @@
 focus_tree = {
-	id = vologda_focus
-	country = {
-		factor = 1
-		modifier = {
-			add = 10
-			tag = VOL
-		}
-	}
-	default = no
-	
-	# === ЭКОНОМИЧЕСКАЯ ВЕТКА ===
-	
-	focus = {
-		id = VOL_economic_recovery
-		icon = GFX_focus_generic_industry_1
-		x = 0
-		y = 0
-		cost = 5
-		available = { has_completed_focus = VOL_economic_recovery } # Start focus
-		
-		completion_reward = {
-			add_ideas = VOL_recovering_economy
-			remove_ideas = VOL_destroyed_economy
-		}
-	}
+id = VOL_focuses
 
-	focus = {
-		id = VOL_rebuild_infrastructure
-		icon = GFX_focus_generic_infrastructure
-		x = -2
-		y = 1
-		prerequisite = { focus = VOL_economic_recovery }
-		cost = 5
-		
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = { state = 646 }
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
+country = {
+factor = 0
 
-	focus = {
-		id = VOL_industrial_development
-		icon = GFX_focus_generic_industry_2
-		x = 0
-		y = 1
-		prerequisite = { focus = VOL_economic_recovery }
-		cost = 5
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = industrial_bonus
-				ahead_reduction = 2
-				category = industry
-				uses = 1
-			}
-			random_owned_controlled_state = {
-				limit = { free_building_slots > 0 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
+modifier = {
+add = 10
+tag = VOL
+}
+}
 
-	focus = {
-		id = VOL_agricultural_reform
-		icon = GFX_focus_generic_agriculture
-		x = 2
-		y = 1
-		prerequisite = { focus = VOL_economic_recovery }
-		cost = 5
-		
-		completion_reward = {
-			add_timed_idea = {
-				idea = VOL_stable_economy
-				days = 365
-			}
-		}
-	}
+default = no
 
-	focus = {
-		id = VOL_trade_expansion
-		icon = GFX_focus_generic_trade
-		x = -2
-		y = 2
-		prerequisite = { focus = VOL_rebuild_infrastructure }
-		cost = 5
-		
-		completion_reward = {
-			add_opinion_modifier = {
-				target = SOV
-				modifier = improved_relations
-			}
-			add_trade_opinion_modifier = {
-				target = SOV
-				opinion = 20
-			}
-		}
-	}
+# ==================== ЭКОНОМИЧЕСКАЯ ВЕТКА ====================
 
-	focus = {
-		id = VOL_heavy_industry
-		icon = GFX_focus_generic_steel
-		x = 0
-		y = 2
-		prerequisite = { focus = VOL_industrial_development }
-		cost = 5
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = industrial_bonus
-				ahead_reduction = 2
-				category = industry
-				uses = 1
-			}
-			random_owned_controlled_state = {
-				limit = { free_building_slots > 0 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
+focus = {
+id = VOL_economic_recovery
+icon = GFX_goal_generic_construction
+x = 0
+y = 0
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_political_power = 50
+add_stability = 0.05
+}
+}
 
-	focus = {
-		id = VOL_consumer_goods
-		icon = GFX_focus_generic_consumer_goods
-		x = 2
-		y = 2
-		prerequisite = { focus = VOL_agricultural_reform }
-		cost = 5
-		
-		completion_reward = {
-			add_ideas = VOL_stable_economy
-			add_stability = 0.05
-		}
-	}
+focus = {
+id = VOL_rebuild_infrastructure
+icon = GFX_goal_generic_construction2
+x = -2
+y = 1
+prerequisite = { focus = VOL_economic_recovery }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+random_owned_controlled_state = {
+limit = { is_core_of = VOL }
+add_building_construction = {
+type = infrastructure
+level = 2
+instant_build = yes
+}
+}
+}
+}
 
-	focus = {
-		id = VOL_economic_independence
-		icon = GFX_focus_generic_economic_boom
-		x = 0
-		y = 3
-		prerequisite = { focus = VOL_heavy_industry }
-		prerequisite = { focus = VOL_consumer_goods }
-		prerequisite = { focus = VOL_trade_expansion }
-		cost = 10
-		
-		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.10
-			swap_ideas = {
-				remove = VOL_recovering_economy
-				add = VOL_stable_economy
-			}
-		}
-	}
+focus = {
+id = VOL_industrial_development
+icon = GFX_goal_generic_production
+x = 0
+y = 1
+prerequisite = { focus = VOL_economic_recovery }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_tech_bonus = {
+name = industrial_bonus
+ahead_reduction = 1
+category = electronics
+}
+}
+}
 
-	# === ВОЕННАЯ ВЕТКА ===
+focus = {
+id = VOL_agricultural_reform
+icon = GFX_goal_generic_construct_civilian
+x = 2
+y = 1
+prerequisite = { focus = VOL_economic_recovery }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_agriculture_boost
+add_stability = 0.03
+}
+}
 
-	focus = {
-		id = VOL_military_modernization
-		icon = GFX_focus_generic_military
-		x = 10
-		y = 0
-		cost = 5
-		
-		completion_reward = {
-			add_ideas = VOL_reforming_military
-			remove_ideas = VOL_disorganized_military
-		}
-	}
+focus = {
+id = VOL_trade_expansion
+icon = GFX_goal_generic_production2
+x = -2
+y = 2
+prerequisite = { focus = VOL_rebuild_infrastructure }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_stability = 0.05
+add_political_power = 25
+}
+}
 
-	focus = {
-		id = VOL_infantry_equipment
-		icon = GFX_focus_generic_infantry_equipment
-		x = 8
-		y = 1
-		prerequisite = { focus = VOL_military_modernization }
-		cost = 5
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_bonus
-				ahead_reduction = 2
-				category = infantry_weapons
-				uses = 1
-			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 500
-			}
-		}
-	}
+focus = {
+id = VOL_heavy_industry
+icon = GFX_goal_generic_construction3
+x = 0
+y = 2
+prerequisite = { focus = VOL_industrial_development }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_tech_bonus = {
+name = industry_bonus
+ahead_reduction = 1
+category = industry
+}
+}
+}
 
-	focus = {
-		id = VOL_officer_training
-		icon = GFX_focus_generic_officers
-		x = 10
-		y = 1
-		prerequisite = { focus = VOL_military_modernization }
-		cost = 5
-		
-		completion_reward = {
-			add_army_experience = 50
-			add_tech_bonus = {
-				name = land_doctrine_bonus
-				ahead_reduction = 2
-				category = land_doctrine
-				uses = 1
-			}
-		}
-	}
+focus = {
+id = VOL_consumer_goods
+icon = GFX_goal_generic_consumer_goods
+x = 2
+y = 2
+prerequisite = { focus = VOL_agricultural_reform }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_stability = 0.05
+add_political_power = 25
+}
+}
 
-	focus = {
-		id = VOL_defensive_doctrine
-		icon = GFX_focus_generic_defense
-		x = 12
-		y = 1
-		prerequisite = { focus = VOL_military_modernization }
-		cost = 5
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = land_doctrine_bonus
-				ahead_reduction = 2
-				category = land_doctrine
-				uses = 1
-			}
-		}
-	}
+focus = {
+id = VOL_economic_independence
+icon = GFX_goal_generic_national_unity
+x = 0
+y = 3
+prerequisite = { focus = VOL_heavy_industry }
+prerequisite = { focus = VOL_trade_expansion }
+prerequisite = { focus = VOL_consumer_goods }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_economic_independence_idea
+add_stability = 0.10
+}
+}
 
-	focus = {
-		id = VOL_artillery_development
-		icon = GFX_focus_generic_artillery
-		x = 8
-		y = 2
-		prerequisite = { focus = VOL_infantry_equipment }
-		cost = 5
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = artillery_bonus
-				ahead_reduction = 2
-				category = artillery
-				uses = 1
-			}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment_1
-				amount = 200
-			}
-		}
-	}
+# ==================== ВОЕННАЯ ВЕТКА ====================
 
-	focus = {
-		id = VOL_motorization
-		icon = GFX_focus_generic_motorized
-		x = 10
-		y = 2
-		prerequisite = { focus = VOL_officer_training }
-		cost = 5
-		
-		completion_reward = {
-			add_tech_bonus = {
-				name = motorized_bonus
-				ahead_reduction = 2
-				category = motorized_equipment
-				uses = 1
-			}
-		}
-	}
+focus = {
+id = VOL_military_modernization
+icon = GFX_goal_generic_army
+x = 10
+y = 0
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_army_experience = 25
+add_war_support = 0.05
+}
+}
 
-	focus = {
-		id = VOL_fortification
-		icon = GFX_focus_generic_fortifications
-		x = 12
-		y = 2
-		prerequisite = { focus = VOL_defensive_doctrine }
-		cost = 5
-		
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = { state = 646 }
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = {
-						all_provinces = yes
-						limit_to_victory_point = yes
-					}
-					instant_build = yes
-				}
-			}
-		}
-	}
+focus = {
+id = VOL_infantry_equipment
+icon = GFX_goal_generic_small_arms
+x = 8
+y = 1
+prerequisite = { focus = VOL_military_modernization }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_tech_bonus = {
+name = infantry_bonus
+ahead_reduction = 1
+category = infantry_weapons
+}
+}
+}
 
-	focus = {
-		id = VOL_military_strength
-		icon = GFX_focus_generic_military_strength
-		x = 10
-		y = 3
-		prerequisite = { focus = VOL_artillery_development }
-		prerequisite = { focus = VOL_motorization }
-		prerequisite = { focus = VOL_fortification }
-		cost = 10
-		
-		completion_reward = {
-			swap_ideas = {
-				remove = VOL_reforming_military
-				add = VOL_modernized_military
-			}
-			add_war_support = 0.10
-		}
-	}
+focus = {
+id = VOL_officer_training
+icon = GFX_goal_generic_army_doctrines
+x = 10
+y = 1
+prerequisite = { focus = VOL_military_modernization }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_army_experience = 50
+add_ideas = VOL_officer_corps_idea
+}
+}
 
-	# === ПОЛИТИЧЕСКАЯ ВЕТКА ===
+focus = {
+id = VOL_defensive_doctrine
+icon = GFX_goal_generic_defence
+x = 12
+y = 1
+prerequisite = { focus = VOL_military_modernization }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_tech_bonus = {
+name = doctrine_bonus
+ahead_reduction = 1
+category = land_doctrine
+}
+}
+}
 
-	focus = {
-		id = VOL_political_reforms
-		icon = GFX_focus_generic_constitution
-		x = 20
-		y = 0
-		cost = 5
-		
-		completion_reward = {
-			add_political_power = 60
-		}
-	}
+focus = {
+id = VOL_artillery_development
+icon = GFX_goal_generic_army_artillery
+x = 8
+y = 2
+prerequisite = { focus = VOL_infantry_equipment }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_tech_bonus = {
+name = artillery_bonus
+ahead_reduction = 1
+category = artillery
+}
+}
+}
 
-	focus = {
-		id = VOL_democratic_path
-		icon = GFX_focus_generic_democracy
-		x = 18
-		y = 1
-		prerequisite = { focus = VOL_political_reforms }
-		mutually_exclusive = { focus = VOL_authoritarian_path focus = VOL_communist_path }
-		available = {
-			has_government = democratic
-		}
-		cost = 5
-		
-		completion_reward = {
-			add_ideas = VOL_democratic_reforms
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.15
-			}
-		}
-	}
+focus = {
+id = VOL_motorization
+icon = GFX_goal_generic_motorized
+x = 10
+y = 2
+prerequisite = { focus = VOL_officer_training }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_tech_bonus = {
+name = motorized_bonus
+ahead_reduction = 1
+category = motorized_equipment
+}
+}
+}
 
-	focus = {
-		id = VOL_authoritarian_path
-		icon = GFX_focus_generic_authoritarian
-		x = 20
-		y = 1
-		prerequisite = { focus = VOL_political_reforms }
-		mutually_exclusive = { focus = VOL_democratic_path focus = VOL_communist_path }
-		available = {
-			has_government = neutrality
-		}
-		cost = 5
-		
-		completion_reward = {
-			add_ideas = VOL_authoritarian_reforms
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.15
-			}
-		}
-	}
+focus = {
+id = VOL_fortification
+icon = GFX_goal_generic_fortify_border
+x = 12
+y = 2
+prerequisite = { focus = VOL_defensive_doctrine }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+random_owned_controlled_state = {
+limit = { is_core_of = VOL }
+add_building_construction = {
+type = bunker
+level = 2
+province = {
+all_provinces = yes
+limit_to_victory_point = yes
+}
+instant_build = yes
+}
+}
+}
+}
 
-	focus = {
-		id = VOL_communist_path
-		icon = GFX_focus_generic_communism
-		x = 22
-		y = 1
-		prerequisite = { focus = VOL_political_reforms }
-		mutually_exclusive = { focus = VOL_democratic_path focus = VOL_authoritarian_path }
-		available = {
-			has_government = communism
-		}
-		cost = 5
-		
-		completion_reward = {
-			add_ideas = VOL_communist_reforms
-			add_popularity = {
-				ideology = communism
-				popularity = 0.15
-			}
-		}
-	}
+focus = {
+id = VOL_military_strength
+icon = GFX_goal_generic_major_war
+x = 10
+y = 3
+prerequisite = { focus = VOL_artillery_development }
+prerequisite = { focus = VOL_motorization }
+prerequisite = { focus = VOL_fortification }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_military_strength_idea
+add_war_support = 0.10
+}
+}
 
-	focus = {
-		id = VOL_constitutional_reform
-		icon = GFX_focus_generic_constitution_2
-		x = 18
-		y = 2
-		prerequisite = { focus = VOL_democratic_path }
-		cost = 5
-		
-		completion_reward = {
-			add_stability = 0.10
-			add_political_power = 50
-		}
-	}
+# ==================== ПОЛИТИЧЕСКАЯ ВЕТКА ====================
 
-	focus = {
-		id = VOL_strong_leadership
-		icon = GFX_focus_generic_leader
-		x = 20
-		y = 2
-		prerequisite = { focus = VOL_authoritarian_path }
-		cost = 5
-		
-		completion_reward = {
-			add_war_support = 0.10
-			add_political_power = 50
-		}
-	}
+focus = {
+id = VOL_political_reforms
+icon = GFX_goal_generic_demand_territory
+x = 20
+y = 0
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_political_power = 75
+add_stability = 0.05
+}
+}
 
-	focus = {
-		id = VOL_workers_rights
-		icon = GFX_focus_generic_workers
-		x = 22
-		y = 2
-		prerequisite = { focus = VOL_communist_path }
-		cost = 5
-		
-		completion_reward = {
-			add_ideas = VOL_workers_rights_idea
-			add_stability = 0.05
-		}
-	}
+focus = {
+id = VOL_democratic_path
+icon = GFX_goal_support_democracy
+x = 18
+y = 1
+prerequisite = { focus = VOL_political_reforms }
+mutually_exclusive = { focus = VOL_authoritarian_path focus = VOL_communist_path }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_popularity = {
+ideology = democratic
+popularity = 0.15
+}
+add_stability = 0.05
+}
+}
 
-	focus = {
-		id = VOL_political_stability
-		icon = GFX_focus_generic_stability
-		x = 20
-		y = 3
-		prerequisite = { focus = VOL_constitutional_reform }
-		prerequisite = { focus = VOL_strong_leadership }
-		prerequisite = { focus = VOL_workers_rights }
-		cost = 10
-		
-		completion_reward = {
-			add_ideas = VOL_political_stability_idea
-			add_stability = 0.15
-		}
-	}
+focus = {
+id = VOL_authoritarian_path
+icon = GFX_goal_support_fascism
+x = 20
+y = 1
+prerequisite = { focus = VOL_political_reforms }
+mutually_exclusive = { focus = VOL_democratic_path focus = VOL_communist_path }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_popularity = {
+ideology = neutrality
+popularity = 0.15
+}
+add_war_support = 0.05
+}
+}
 
-	# === ЦЕЛИ ВОЙНЫ ===
+focus = {
+id = VOL_communist_path
+icon = GFX_goal_support_communism
+x = 22
+y = 1
+prerequisite = { focus = VOL_political_reforms }
+mutually_exclusive = { focus = VOL_democratic_path focus = VOL_authoritarian_path }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_popularity = {
+ideology = communism
+popularity = 0.15
+}
+add_stability = 0.05
+}
+}
 
-	focus = {
-		id = VOL_claim_archangel
-		icon = GFX_focus_generic_attack
-		x = 24
-		y = 1
-		prerequisite = { focus = VOL_military_strength }
-		cost = 5
-		
-		completion_reward = {
-			add_named_threat = { threat = 2 name = VOL_claim_archangel }
-			add_ideas = VOL_war_goal_archangel
-			if = {
-				limit = { has_country_flag = VOL_claim_archangel_flag }
-				add_war_goal = {
-					type = annex_wargoal_only
-					target = SOV
-				}
-			}
-		}
-	}
+focus = {
+id = VOL_constitutional_reform
+icon = GFX_goal_generic_neutrality
+x = 18
+y = 2
+prerequisite = { focus = VOL_democratic_path }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_democratic_reforms
+add_stability = 0.05
+}
+}
 
-	focus = {
-		id = VOL_claim_yaroslavl
-		icon = GFX_focus_generic_attack
-		x = 24
-		y = 2
-		prerequisite = { focus = VOL_military_strength }
-		cost = 5
-		
-		completion_reward = {
-			add_named_threat = { threat = 2 name = VOL_claim_yaroslavl }
-			add_ideas = VOL_war_goal_archangel
-			if = {
-				limit = { has_country_flag = VOL_claim_yaroslavl_flag }
-				add_war_goal = {
-					type = annex_wargoal_only
-					target = SOV
-				}
-			}
-		}
-	}
+focus = {
+id = VOL_strong_leadership
+icon = GFX_goal_generic_political_pressure
+x = 20
+y = 2
+prerequisite = { focus = VOL_authoritarian_path }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_authoritarian_reforms
+add_war_support = 0.05
+}
+}
 
-	focus = {
-		id = VOL_claim_kostroma
-		icon = GFX_focus_generic_attack
-		x = 24
-		y = 3
-		prerequisite = { focus = VOL_military_strength }
-		cost = 5
-		
-		completion_reward = {
-			add_named_threat = { threat = 2 name = VOL_claim_kostroma }
-			add_ideas = VOL_war_goal_archangel
-			if = {
-				limit = { has_country_flag = VOL_claim_kostroma_flag }
-				add_war_goal = {
-					type = annex_wargoal_only
-					target = SOV
-				}
-			}
-		}
-	}
+focus = {
+id = VOL_workers_rights
+icon = GFX_goal_generic_improve_relations
+x = 22
+y = 2
+prerequisite = { focus = VOL_communist_path }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_communist_reforms
+add_stability = 0.05
+}
+}
+
+focus = {
+id = VOL_workers_rights_focus
+icon = GFX_goal_generic_production
+x = 24
+y = 2
+prerequisite = { focus = VOL_communist_path }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_workers_rights_idea
+add_stability = 0.05
+}
+}
+
+focus = {
+id = VOL_political_stability
+icon = GFX_goal_generic_national_unity
+x = 20
+y = 3
+prerequisite = { focus = VOL_constitutional_reform }
+prerequisite = { focus = VOL_strong_leadership }
+prerequisite = { focus = VOL_workers_rights }
+prerequisite = { focus = VOL_workers_rights_focus }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_political_stability_idea
+add_stability = 0.10
+add_political_power = 50
+}
+}
+
+# ==================== ЦЕЛИ ВОЙНЫ ====================
+
+focus = {
+id = VOL_claim_archangel
+icon = GFX_goal_generic_territory_or_war
+x = 26
+y = 1
+prerequisite = { focus = VOL_military_strength }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_war_goal_archangel
+add_war_support = 0.05
+}
+}
+
+focus = {
+id = VOL_claim_yaroslavl
+icon = GFX_goal_generic_territory_or_war
+x = 26
+y = 2
+prerequisite = { focus = VOL_military_strength }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_war_goal_yaroslavl
+add_war_support = 0.05
+}
+}
+
+focus = {
+id = VOL_claim_kostroma
+icon = GFX_goal_generic_territory_or_war
+x = 26
+y = 3
+prerequisite = { focus = VOL_military_strength }
+cost = 5
+ai_will_do = { factor = 1 }
+completion_reward = {
+add_ideas = VOL_war_goal_kostroma
+add_war_support = 0.05
+}
+}
 }
