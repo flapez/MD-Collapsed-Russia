@@ -56,6 +56,42 @@
  VOL_political_stability: "Political Stability"
  VOL_political_stability_desc: "Achieve lasting political stability"
  
+ # War Goals
+ VOL_claim_archangel: "Claim Archangel"
+ VOL_claim_archangel_desc: "Return Archangel under our control"
+ VOL_claim_yaroslavl: "Claim Yaroslavl"
+ VOL_claim_yaroslavl_desc: "Establish control over Yaroslavl"
+ VOL_claim_kostroma: "Claim Kostroma"
+ VOL_claim_kostroma_desc: "Include Kostroma in our state"
+ 
+ # Additional Economic Focuses
+ VOL_small_business_support: "Small Business Support"
+ VOL_small_business_support_desc: "Stimulate the development of small and medium enterprises"
+ VOL_technological_innovation: "Technological Innovation"
+ VOL_technological_innovation_desc: "Invest in modern technologies and research"
+ VOL_resource_extraction: "Resource Extraction"
+ VOL_resource_extraction_desc: "Develop natural resource extraction in the region"
+ VOL_economic_miracle: "Economic Miracle"
+ VOL_economic_miracle_desc: "Achieve incredible economic growth"
+ 
+ # Additional Military Focuses
+ VOL_special_forces: "Special Forces"
+ VOL_special_forces_desc: "Create elite special operations units"
+ VOL_armor_development: "Armor Development"
+ VOL_armor_development_desc: "Modernize our tank formations"
+ VOL_air_support: "Air Support"
+ VOL_air_support_desc: "Develop air force to support the army"
+ VOL_military_industrial_complex: "Military Industrial Complex"
+ VOL_military_industrial_complex_desc: "Expand weapons and military equipment production"
+ 
+ # Additional Political Focuses
+ VOL_anti_corruption: "Anti-Corruption"
+ VOL_anti_corruption_desc: "Eliminate corruption in government bodies"
+ VOL_national_unity: "National Unity"
+ VOL_national_unity_desc: "Unite the people around common goals"
+ VOL_foreign_alliances: "Foreign Alliances"
+ VOL_foreign_alliances_desc: "Establish strong alliance relations with other countries"
+ 
  # Ideas - Starting problems
  VOL_destroyed_economy: "Destroyed Economy"
  VOL_destroyed_economy_desc: "Our economy is in deep crisis after the collapse of the USSR"

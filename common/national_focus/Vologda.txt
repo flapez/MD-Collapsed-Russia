@@ -149,7 +149,7 @@ y = 0
 cost = 5
 ai_will_do = { factor = 1 }
 completion_reward = {
-add_army_experience = 25
+army_experience = 25
 add_war_support = 0.05
 }
 }
@@ -180,7 +180,7 @@ prerequisite = { focus = VOL_military_modernization }
 cost = 5
 ai_will_do = { factor = 1 }
 completion_reward = {
-add_army_experience = 50
+army_experience = 50
 add_ideas = VOL_officer_corps_idea
 }
 }
@@ -422,44 +422,237 @@ add_political_power = 50
 # ==================== ЦЕЛИ ВОЙНЫ ====================
 
 focus = {
-id = VOL_claim_archangel
-icon = GFX_goal_generic_territory_or_war
-x = 26
-y = 1
-prerequisite = { focus = VOL_military_strength }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_ideas = VOL_war_goal_archangel
-add_war_support = 0.05
-}
-}
-
-focus = {
-id = VOL_claim_yaroslavl
-icon = GFX_goal_generic_territory_or_war
-x = 26
-y = 2
-prerequisite = { focus = VOL_military_strength }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_ideas = VOL_war_goal_yaroslavl
-add_war_support = 0.05
-}
+	id = VOL_claim_archangel
+	icon = GFX_goal_generic_territory_or_war
+	x = 28
+	y = 0
+	prerequisite = { focus = VOL_military_strength }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_ideas = VOL_war_goal_archangel
+		add_war_support = 0.05
+	}
 }
 
 focus = {
-id = VOL_claim_kostroma
-icon = GFX_goal_generic_territory_or_war
-x = 26
-y = 3
-prerequisite = { focus = VOL_military_strength }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_ideas = VOL_war_goal_kostroma
-add_war_support = 0.05
+	id = VOL_claim_yaroslavl
+	icon = GFX_goal_generic_territory_or_war
+	x = 28
+	y = 1
+	prerequisite = { focus = VOL_military_strength }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_ideas = VOL_war_goal_yaroslavl
+		add_war_support = 0.05
+	}
 }
+
+focus = {
+	id = VOL_claim_kostroma
+	icon = GFX_goal_generic_territory_or_war
+	x = 28
+	y = 2
+	prerequisite = { focus = VOL_military_strength }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_ideas = VOL_war_goal_kostroma
+		add_war_support = 0.05
+	}
+}
+
+# ==================== ДОПОЛНИТЕЛЬНЫЕ ЭКОНОМИЧЕСКИЕ ФОКУСЫ ====================
+
+focus = {
+	id = VOL_small_business_support
+	icon = GFX_goal_generic_construction
+	x = -4
+	y = 2
+	prerequisite = { focus = VOL_rebuild_infrastructure }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_stability = 0.05
+		add_political_power = 25
+	}
+}
+
+focus = {
+	id = VOL_technological_innovation
+	icon = GFX_goal_generic_scientific_exchange
+	x = -2
+	y = 3
+	prerequisite = { focus = VOL_small_business_support }
+	prerequisite = { focus = VOL_industrial_development }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_tech_bonus = {
+			name = electronics_bonus
+			ahead_reduction = 1
+			category = electronics
+		}
+	}
+}
+
+focus = {
+	id = VOL_resource_extraction
+	icon = GFX_goal_generic_production
+	x = 2
+	y = 3
+	prerequisite = { focus = VOL_agricultural_reform }
+	prerequisite = { focus = VOL_consumer_goods }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = { is_core_of = VOL }
+			add_resource = {
+				type = oil
+				amount = 4
+			}
+		}
+	}
+}
+
+focus = {
+	id = VOL_economic_miracle
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 4
+	prerequisite = { focus = VOL_technological_innovation }
+	prerequisite = { focus = VOL_economic_independence }
+	prerequisite = { focus = VOL_resource_extraction }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_stability = 0.15
+		add_political_power = 50
+		add_timed_idea = {
+			idea = economic_boom
+			days = 730
+		}
+	}
+}
+
+# ==================== ДОПОЛНИТЕЛЬНЫЕ ВОЕННЫЕ ФОКУСЫ ====================
+
+focus = {
+	id = VOL_special_forces
+	icon = GFX_goal_generic_special_forces
+	x = 6
+	y = 2
+	prerequisite = { focus = VOL_infantry_equipment }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		create_corps_commander = {
+			name = "Dmitry Volkov"
+			traits = { trait_recon_expert commando }
+			skill = 2
+		}
+	}
+}
+
+focus = {
+	id = VOL_armor_development
+	icon = GFX_goal_generic_army_tanks
+	x = 14
+	y = 2
+	prerequisite = { focus = VOL_defensive_doctrine }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_tech_bonus = {
+			name = armor_bonus
+			ahead_reduction = 1
+			category = armor
+		}
+	}
+}
+
+focus = {
+	id = VOL_air_support
+	icon = GFX_goal_generic_air_force
+	x = 10
+	y = 4
+	prerequisite = { focus = VOL_military_strength }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_bonus
+			ahead_reduction = 1
+			category = air_doctrine
+		}
+		air_experience = 25
+	}
+}
+
+focus = {
+	id = VOL_military_industrial_complex
+	icon = GFX_goal_generic_build_tank
+	x = 12
+	y = 4
+	prerequisite = { focus = VOL_armor_development }
+	prerequisite = { focus = VOL_air_support }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_timed_idea = {
+			idea = war_industry_effort
+			days = 365
+		}
+	}
+}
+
+# ==================== ДОПОЛНИТЕЛЬНЫЕ ПОЛИТИЧЕСКИЕ ФОКУСЫ ====================
+
+focus = {
+	id = VOL_anti_corruption
+	icon = GFX_goal_generic_political_pressure
+	x = 16
+	y = 2
+	prerequisite = { focus = VOL_democratic_path }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_stability = 0.10
+		add_political_power = 50
+	}
+}
+
+focus = {
+	id = VOL_national_unity
+	icon = GFX_goal_generic_national_unity
+	x = 24
+	y = 2
+	prerequisite = { focus = VOL_communist_path }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_stability = 0.10
+		add_war_support = 0.05
+	}
+}
+
+focus = {
+	id = VOL_foreign_alliances
+	icon = GFX_goal_generic_alliance
+	x = 20
+	y = 4
+	prerequisite = { focus = VOL_anti_corruption }
+	prerequisite = { focus = VOL_political_stability }
+	prerequisite = { focus = VOL_national_unity }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_political_power = 75
+		custom_effect_tooltip = VOL_improve_relations_tt
+	}
 }
 }
