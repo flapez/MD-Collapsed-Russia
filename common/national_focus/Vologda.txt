@@ -65,35 +65,35 @@ remove_ideas = VOL_economy_level_1
 }
 
 focus = {
-id = VOL_industrial_development
-icon = GFX_goal_generic_production
-x = 0
-y = 1
-prerequisite = { focus = VOL_economic_recovery }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_tech_bonus = {
-name = industrial_bonus
-ahead_reduction = 1
-technology = { industrial_applications electronics }
-}
-# Improve economy from level 3 to 2 OR from level 2 to 1
-if = {
-limit = { has_idea = VOL_economy_level_3 }
-remove_ideas = VOL_economy_level_3
-add_ideas = VOL_economy_level_2
-}
-else_if = {
-limit = { has_idea = VOL_economy_level_2 }
-remove_ideas = VOL_economy_level_2
-add_ideas = VOL_economy_level_1
-}
-else_if = {
-limit = { has_idea = VOL_economy_level_1 }
-remove_ideas = VOL_economy_level_1
-}
-}
+	id = VOL_industrial_development
+	icon = GFX_goal_generic_production
+	x = 0
+	y = 1
+	prerequisite = { focus = VOL_economic_recovery }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_tech_bonus = {
+			name = industrial_bonus
+			ahead_reduction = 1
+			technology = { CAT_industry CAT_construction_tech }
+		}
+		# Improve economy from level 3 to 2 OR from level 2 to 1
+		if = {
+			limit = { has_idea = VOL_economy_level_3 }
+			remove_ideas = VOL_economy_level_3
+			add_ideas = VOL_economy_level_2
+		}
+		else_if = {
+			limit = { has_idea = VOL_economy_level_2 }
+			remove_ideas = VOL_economy_level_2
+			add_ideas = VOL_economy_level_1
+		}
+		else_if = {
+			limit = { has_idea = VOL_economy_level_1 }
+			remove_ideas = VOL_economy_level_1
+		}
+	}
 }
 
 focus = {
@@ -140,20 +140,20 @@ add_political_power = 25
 }
 
 focus = {
-id = VOL_heavy_industry
-icon = GFX_goal_generic_construction3
-x = 0
-y = 2
-prerequisite = { focus = VOL_industrial_development }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_tech_bonus = {
-name = industry_bonus
-ahead_reduction = 1
-technology = { industrial_applications electronics }
-}
-}
+	id = VOL_heavy_industry
+	icon = GFX_goal_generic_construction3
+	x = 0
+	y = 2
+	prerequisite = { focus = VOL_industrial_development }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_tech_bonus = {
+			name = industry_bonus
+			ahead_reduction = 1
+			technology = { CAT_industry CAT_fuel_oil }
+		}
+	}
 }
 
 focus = {
@@ -214,35 +214,35 @@ add_ideas = VOL_army_level_3
 }
 
 focus = {
-id = VOL_infantry_equipment
-icon = GFX_goal_generic_small_arms
-x = 8
-y = 1
-prerequisite = { focus = VOL_military_modernization }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_tech_bonus = {
-name = infantry_bonus
-ahead_reduction = 1
-technology = { infantry_weapons }
-}
-# Improve army from level 3 to 2 OR from level 2 to 1
-if = {
-limit = { has_idea = VOL_army_level_3 }
-remove_ideas = VOL_army_level_3
-add_ideas = VOL_army_level_2
-}
-else_if = {
-limit = { has_idea = VOL_army_level_2 }
-remove_ideas = VOL_army_level_2
-add_ideas = VOL_army_level_1
-}
-else_if = {
-limit = { has_idea = VOL_army_level_1 }
-remove_ideas = VOL_army_level_1
-}
-}
+	id = VOL_infantry_equipment
+	icon = GFX_goal_generic_small_arms
+	x = 8
+	y = 1
+	prerequisite = { focus = VOL_military_modernization }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_tech_bonus = {
+			name = infantry_bonus
+			ahead_reduction = 1
+			technology = { CAT_inf_wep CAT_support_weapons }
+		}
+		# Improve army from level 3 to 2 OR from level 2 to 1
+		if = {
+			limit = { has_idea = VOL_army_level_3 }
+			remove_ideas = VOL_army_level_3
+			add_ideas = VOL_army_level_2
+		}
+		else_if = {
+			limit = { has_idea = VOL_army_level_2 }
+			remove_ideas = VOL_army_level_2
+			add_ideas = VOL_army_level_1
+		}
+		else_if = {
+			limit = { has_idea = VOL_army_level_1 }
+			remove_ideas = VOL_army_level_1
+		}
+	}
 }
 
 focus = {
@@ -275,69 +275,69 @@ remove_ideas = VOL_army_level_1
 }
 
 focus = {
-id = VOL_defensive_doctrine
-icon = GFX_goal_generic_defence
-x = 12
-y = 1
-prerequisite = { focus = VOL_military_modernization }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_tech_bonus = {
-name = doctrine_bonus
-ahead_reduction = 1
-technology = { land_doctrine }
-}
-# Improve army from level 3 to 2 OR from level 2 to 1
-if = {
-limit = { has_idea = VOL_army_level_3 }
-remove_ideas = VOL_army_level_3
-add_ideas = VOL_army_level_2
-}
-else_if = {
-limit = { has_idea = VOL_army_level_2 }
-remove_ideas = VOL_army_level_2
-add_ideas = VOL_army_level_1
-}
-else_if = {
-limit = { has_idea = VOL_army_level_1 }
-remove_ideas = VOL_army_level_1
-}
-}
-}
-
-focus = {
-id = VOL_artillery_development
-icon = GFX_goal_generic_army_artillery
-x = 8
-y = 2
-prerequisite = { focus = VOL_infantry_equipment }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_tech_bonus = {
-name = artillery_bonus
-ahead_reduction = 1
-technology = { artillery }
-}
-}
+	id = VOL_defensive_doctrine
+	icon = GFX_goal_generic_defence
+	x = 12
+	y = 1
+	prerequisite = { focus = VOL_military_modernization }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_tech_bonus = {
+			name = doctrine_bonus
+			ahead_reduction = 1
+			technology = { CAT_defensive_doctrine CAT_land_doctrine }
+		}
+		# Improve army from level 3 to 2 OR from level 2 to 1
+		if = {
+			limit = { has_idea = VOL_army_level_3 }
+			remove_ideas = VOL_army_level_3
+			add_ideas = VOL_army_level_2
+		}
+		else_if = {
+			limit = { has_idea = VOL_army_level_2 }
+			remove_ideas = VOL_army_level_2
+			add_ideas = VOL_army_level_1
+		}
+		else_if = {
+			limit = { has_idea = VOL_army_level_1 }
+			remove_ideas = VOL_army_level_1
+		}
+	}
 }
 
 focus = {
-id = VOL_motorization
-icon = GFX_goal_generic_motorized
-x = 10
-y = 2
-prerequisite = { focus = VOL_officer_training }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_tech_bonus = {
-name = motorized_bonus
-ahead_reduction = 1
-technology = { motorized_equipment armored_car_equipment }
+	id = VOL_artillery_development
+	icon = GFX_goal_generic_army_artillery
+	x = 8
+	y = 2
+	prerequisite = { focus = VOL_infantry_equipment }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_tech_bonus = {
+			name = artillery_bonus
+			ahead_reduction = 1
+			technology = { CAT_arty CAT_sp_arty }
+		}
+	}
 }
-}
+
+focus = {
+	id = VOL_motorization
+	icon = GFX_goal_generic_motorized
+	x = 10
+	y = 2
+	prerequisite = { focus = VOL_officer_training }
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_tech_bonus = {
+			name = motorized_bonus
+			ahead_reduction = 1
+			technology = { CAT_util CAT_cze }
+		}
+	}
 }
 
 focus = {
@@ -516,20 +516,26 @@ add_stability = 0.05
 }
 
 focus = {
-id = VOL_political_stability
-icon = GFX_goal_generic_national_unity
-x = 20
-y = 3
-# Требует любой из трёх путей - не все сразу!
-prerequisite = { focus = VOL_constitutional_reform }
-OR_prerequisites = { focus = VOL_strong_leadership focus = VOL_workers_rights focus = VOL_workers_rights_focus }
-cost = 5
-ai_will_do = { factor = 1 }
-completion_reward = {
-add_ideas = VOL_political_stability_idea
-add_stability = 0.10
-add_political_power = 50
-}
+	id = VOL_political_stability
+	icon = GFX_goal_generic_national_unity
+	x = 20
+	y = 3
+	# Требует любой из трёх путей - не все сразу!
+	prerequisite = { focus = VOL_constitutional_reform }
+	prerequisite = { 
+		focus = VOL_strong_leadership 
+		OR = { 
+			focus = VOL_workers_rights 
+			focus = VOL_workers_rights_focus 
+		}
+	}
+	cost = 5
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		add_ideas = VOL_political_stability_idea
+		add_stability = 0.10
+		add_political_power = 50
+	}
 }
 
 # ==================== ЦЕЛИ ВОЙНЫ ====================
@@ -543,7 +549,7 @@ focus = {
 	cost = 5
 	ai_will_do = { factor = 1 }
 	completion_reward = {
-		add_wargoal_timed_idea_effect = { target = ARC days = 365 }
+		add_ideas = VOL_war_goal_archangel
 	}
 }
 
@@ -556,7 +562,7 @@ focus = {
 	cost = 5
 	ai_will_do = { factor = 1 }
 	completion_reward = {
-		add_wargoal_timed_idea_effect = { target = YAR days = 365 }
+		add_ideas = VOL_war_goal_yaroslavl
 	}
 }
 
@@ -569,7 +575,7 @@ focus = {
 	cost = 5
 	ai_will_do = { factor = 1 }
 	completion_reward = {
-		add_wargoal_timed_idea_effect = { target = KOS days = 365 }
+		add_ideas = VOL_war_goal_kostroma
 	}
 }
 
@@ -723,22 +729,22 @@ focus = {
 		add_tech_bonus = {
 			name = armor_bonus
 			ahead_reduction = 1
-			technology = { cat_armor motorized_equipment }
+			technology = { CAT_armor CAT_tanks }
 		}
 		# Improve army from level 3 to 2 OR from level 2 to 1
 		if = {
-		limit = { has_idea = VOL_army_level_3 }
-		remove_ideas = VOL_army_level_3
-		add_ideas = VOL_army_level_2
+			limit = { has_idea = VOL_army_level_3 }
+			remove_ideas = VOL_army_level_3
+			add_ideas = VOL_army_level_2
 		}
 		else_if = {
-		limit = { has_idea = VOL_army_level_2 }
-		remove_ideas = VOL_army_level_2
-		add_ideas = VOL_army_level_1
+			limit = { has_idea = VOL_army_level_2 }
+			remove_ideas = VOL_army_level_2
+			add_ideas = VOL_army_level_1
 		}
 		else_if = {
-		limit = { has_idea = VOL_army_level_1 }
-		remove_ideas = VOL_army_level_1
+			limit = { has_idea = VOL_army_level_1 }
+			remove_ideas = VOL_army_level_1
 		}
 	}
 }
@@ -746,32 +752,32 @@ focus = {
 focus = {
 	id = VOL_air_support
 	icon = GFX_goal_generic_air_force
-	x = 10
-	y = 4
-	prerequisite = { focus = VOL_military_strength }
+	x = 16
+	y = 2
+	prerequisite = { focus = VOL_defensive_doctrine }
 	cost = 5
 	ai_will_do = { factor = 1 }
 	completion_reward = {
 		add_tech_bonus = {
 			name = air_bonus
 			ahead_reduction = 1
-			technology = { air_doctrine light_fighter medium_plane }
+			technology = { CAT_air_doctrine CAT_fighter }
 		}
 		air_experience = 25
 		# Improve army from level 3 to 2 OR from level 2 to 1
 		if = {
-		limit = { has_idea = VOL_army_level_3 }
-		remove_ideas = VOL_army_level_3
-		add_ideas = VOL_army_level_2
+			limit = { has_idea = VOL_army_level_3 }
+			remove_ideas = VOL_army_level_3
+			add_ideas = VOL_army_level_2
 		}
 		else_if = {
-		limit = { has_idea = VOL_army_level_2 }
-		remove_ideas = VOL_army_level_2
-		add_ideas = VOL_army_level_1
+			limit = { has_idea = VOL_army_level_2 }
+			remove_ideas = VOL_army_level_2
+			add_ideas = VOL_army_level_1
 		}
 		else_if = {
-		limit = { has_idea = VOL_army_level_1 }
-		remove_ideas = VOL_army_level_1
+			limit = { has_idea = VOL_army_level_1 }
+			remove_ideas = VOL_army_level_1
 		}
 	}
 }
@@ -779,8 +785,8 @@ focus = {
 focus = {
 	id = VOL_military_industrial_complex
 	icon = GFX_goal_generic_build_tank
-	x = 12
-	y = 4
+	x = 15
+	y = 3
 	prerequisite = { focus = VOL_armor_development }
 	prerequisite = { focus = VOL_air_support }
 	cost = 5
