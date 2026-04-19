@@ -1,3 +1,4 @@
+```
 # Compiled and build artifacts
 *.pyc
 __pycache__/
@@ -16,7 +17,7 @@ venv/
 .venv/
 .env
 .env.local
-*.env.*
+.env.*
 
 # Logs and temp files
 *.log
@@ -37,15 +38,20 @@ coverage/
 htmlcov/
 .coverage
 
-# Build directories
+# MyPy
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# Distribution / packaging
 dist/
 build/
-target/
-.gradle/
+*.egg-info/
 
-# Python specific
-.mypy_cache/
-.pytest_cache/
+# Gradle
+.gradle/
+target/
 
 # Compressed files
 *.zip
@@ -70,3 +76,4 @@ target/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+```
