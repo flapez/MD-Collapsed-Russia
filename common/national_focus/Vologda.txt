@@ -189,12 +189,14 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = { treasury_change = -12 }
 			modify_treasury_effect = yes
-			state = 646
-			add_building_construction = {
-				type = naval_base
-				level = 1
-				instant_build = yes
-				province = 3057
+			random_owned_controlled_state = {
+				limit = { state = 646 }
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 3057
+				}
 			}
 			add_ideas = vol_white_sea_access
 		}
@@ -323,12 +325,14 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			add_to_variable = { var = army_exp value = 30 }
-			state = 646
-			add_building_construction = {
-				type = bunker
-				level = 1
-				instant_build = yes
-				province = 3057
+			random_owned_controlled_state = {
+				limit = { state = 646 }
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3057
+				}
 			}
 		}
 	}
@@ -459,7 +463,7 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			add_stability = 0.10
-			add_popularity = { ideology = liberalism popularity = 0.10 }
+			add_popularity = { ideology = democratic popularity = 0.10 }
 		}
 	}
 
