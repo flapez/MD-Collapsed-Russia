@@ -24,6 +24,8 @@ ai_will_do = { factor = 1 }
 completion_reward = {
 add_political_power = 50
 add_stability = 0.05
+# Start with economy level 3 (destroyed)
+add_ideas = VOL_economy_level_3
 }
 }
 
@@ -44,6 +46,21 @@ level = 2
 instant_build = yes
 }
 }
+# Improve economy from level 3 to 2 OR from level 2 to 1
+if = {
+limit = { has_idea = VOL_economy_level_3 }
+remove_ideas = VOL_economy_level_3
+add_ideas = VOL_economy_level_2
+}
+else_if = {
+limit = { has_idea = VOL_economy_level_2 }
+remove_ideas = VOL_economy_level_2
+add_ideas = VOL_economy_level_1
+}
+else_if = {
+limit = { has_idea = VOL_economy_level_1 }
+remove_ideas = VOL_economy_level_1
+}
 }
 }
 
@@ -59,7 +76,22 @@ completion_reward = {
 add_tech_bonus = {
 name = industrial_bonus
 ahead_reduction = 1
-category = electronics
+technology = { industrial_applications electronics }
+}
+# Improve economy from level 3 to 2 OR from level 2 to 1
+if = {
+limit = { has_idea = VOL_economy_level_3 }
+remove_ideas = VOL_economy_level_3
+add_ideas = VOL_economy_level_2
+}
+else_if = {
+limit = { has_idea = VOL_economy_level_2 }
+remove_ideas = VOL_economy_level_2
+add_ideas = VOL_economy_level_1
+}
+else_if = {
+limit = { has_idea = VOL_economy_level_1 }
+remove_ideas = VOL_economy_level_1
 }
 }
 }
@@ -75,6 +107,21 @@ ai_will_do = { factor = 1 }
 completion_reward = {
 add_ideas = VOL_agriculture_boost
 add_stability = 0.03
+# Improve economy from level 3 to 2 OR from level 2 to 1
+if = {
+limit = { has_idea = VOL_economy_level_3 }
+remove_ideas = VOL_economy_level_3
+add_ideas = VOL_economy_level_2
+}
+else_if = {
+limit = { has_idea = VOL_economy_level_2 }
+remove_ideas = VOL_economy_level_2
+add_ideas = VOL_economy_level_1
+}
+else_if = {
+limit = { has_idea = VOL_economy_level_1 }
+remove_ideas = VOL_economy_level_1
+}
 }
 }
 
@@ -104,7 +151,7 @@ completion_reward = {
 add_tech_bonus = {
 name = industry_bonus
 ahead_reduction = 1
-category = industry
+technology = { industrial_applications electronics }
 }
 }
 }
@@ -136,6 +183,16 @@ ai_will_do = { factor = 1 }
 completion_reward = {
 add_ideas = VOL_economic_independence_idea
 add_stability = 0.10
+# Final economy improvement to level 0 (normal)
+if = {
+limit = { has_idea = VOL_economy_level_2 }
+remove_ideas = VOL_economy_level_2
+add_ideas = VOL_economy_level_1
+}
+if = {
+limit = { has_idea = VOL_economy_level_1 }
+remove_ideas = VOL_economy_level_1
+}
 }
 }
 
@@ -151,6 +208,8 @@ ai_will_do = { factor = 1 }
 completion_reward = {
 army_experience = 25
 add_war_support = 0.05
+# Start with army level 3 (disorganized)
+add_ideas = VOL_army_level_3
 }
 }
 
@@ -166,7 +225,22 @@ completion_reward = {
 add_tech_bonus = {
 name = infantry_bonus
 ahead_reduction = 1
-category = infantry_weapons
+technology = { infantry_weapons }
+}
+# Improve army from level 3 to 2 OR from level 2 to 1
+if = {
+limit = { has_idea = VOL_army_level_3 }
+remove_ideas = VOL_army_level_3
+add_ideas = VOL_army_level_2
+}
+else_if = {
+limit = { has_idea = VOL_army_level_2 }
+remove_ideas = VOL_army_level_2
+add_ideas = VOL_army_level_1
+}
+else_if = {
+limit = { has_idea = VOL_army_level_1 }
+remove_ideas = VOL_army_level_1
 }
 }
 }
@@ -182,6 +256,21 @@ ai_will_do = { factor = 1 }
 completion_reward = {
 army_experience = 50
 add_ideas = VOL_officer_corps_idea
+# Improve army from level 3 to 2 OR from level 2 to 1
+if = {
+limit = { has_idea = VOL_army_level_3 }
+remove_ideas = VOL_army_level_3
+add_ideas = VOL_army_level_2
+}
+else_if = {
+limit = { has_idea = VOL_army_level_2 }
+remove_ideas = VOL_army_level_2
+add_ideas = VOL_army_level_1
+}
+else_if = {
+limit = { has_idea = VOL_army_level_1 }
+remove_ideas = VOL_army_level_1
+}
 }
 }
 
@@ -197,7 +286,22 @@ completion_reward = {
 add_tech_bonus = {
 name = doctrine_bonus
 ahead_reduction = 1
-category = land_doctrine
+technology = { land_doctrine }
+}
+# Improve army from level 3 to 2 OR from level 2 to 1
+if = {
+limit = { has_idea = VOL_army_level_3 }
+remove_ideas = VOL_army_level_3
+add_ideas = VOL_army_level_2
+}
+else_if = {
+limit = { has_idea = VOL_army_level_2 }
+remove_ideas = VOL_army_level_2
+add_ideas = VOL_army_level_1
+}
+else_if = {
+limit = { has_idea = VOL_army_level_1 }
+remove_ideas = VOL_army_level_1
 }
 }
 }
@@ -214,7 +318,7 @@ completion_reward = {
 add_tech_bonus = {
 name = artillery_bonus
 ahead_reduction = 1
-category = artillery
+technology = { artillery }
 }
 }
 }
@@ -231,7 +335,7 @@ completion_reward = {
 add_tech_bonus = {
 name = motorized_bonus
 ahead_reduction = 1
-category = motorized_equipment
+technology = { motorized_equipment armored_car_equipment }
 }
 }
 }
@@ -273,6 +377,16 @@ ai_will_do = { factor = 1 }
 completion_reward = {
 add_ideas = VOL_military_strength_idea
 add_war_support = 0.10
+# Final army improvement to level 0 (normal)
+if = {
+limit = { has_idea = VOL_army_level_2 }
+remove_ideas = VOL_army_level_2
+add_ideas = VOL_army_level_1
+}
+if = {
+limit = { has_idea = VOL_army_level_1 }
+remove_ideas = VOL_army_level_1
+}
 }
 }
 
@@ -406,10 +520,9 @@ id = VOL_political_stability
 icon = GFX_goal_generic_national_unity
 x = 20
 y = 3
+# Требует любой из трёх путей - не все сразу!
 prerequisite = { focus = VOL_constitutional_reform }
-prerequisite = { focus = VOL_strong_leadership }
-prerequisite = { focus = VOL_workers_rights }
-prerequisite = { focus = VOL_workers_rights_focus }
+OR_prerequisites = { focus = VOL_strong_leadership focus = VOL_workers_rights focus = VOL_workers_rights_focus }
 cost = 5
 ai_will_do = { factor = 1 }
 completion_reward = {
@@ -424,42 +537,39 @@ add_political_power = 50
 focus = {
 	id = VOL_claim_archangel
 	icon = GFX_goal_generic_territory_or_war
-	x = 28
+	x = 14
 	y = 0
 	prerequisite = { focus = VOL_military_strength }
 	cost = 5
 	ai_will_do = { factor = 1 }
 	completion_reward = {
-		add_ideas = VOL_war_goal_archangel
-		add_war_support = 0.05
+		add_wargoal_timed_idea_effect = { target = ARC days = 365 }
 	}
 }
 
 focus = {
 	id = VOL_claim_yaroslavl
 	icon = GFX_goal_generic_territory_or_war
-	x = 28
+	x = 14
 	y = 1
 	prerequisite = { focus = VOL_military_strength }
 	cost = 5
 	ai_will_do = { factor = 1 }
 	completion_reward = {
-		add_ideas = VOL_war_goal_yaroslavl
-		add_war_support = 0.05
+		add_wargoal_timed_idea_effect = { target = YAR days = 365 }
 	}
 }
 
 focus = {
 	id = VOL_claim_kostroma
 	icon = GFX_goal_generic_territory_or_war
-	x = 28
+	x = 14
 	y = 2
 	prerequisite = { focus = VOL_military_strength }
 	cost = 5
 	ai_will_do = { factor = 1 }
 	completion_reward = {
-		add_ideas = VOL_war_goal_kostroma
-		add_war_support = 0.05
+		add_wargoal_timed_idea_effect = { target = KOS days = 365 }
 	}
 }
 
@@ -492,7 +602,22 @@ focus = {
 		add_tech_bonus = {
 			name = electronics_bonus
 			ahead_reduction = 1
-			category = electronics
+			technology = { electronics computers }
+		}
+		# Improve economy from level 3 to 2 OR from level 2 to 1
+		if = {
+		limit = { has_idea = VOL_economy_level_3 }
+		remove_ideas = VOL_economy_level_3
+		add_ideas = VOL_economy_level_2
+		}
+		else_if = {
+		limit = { has_idea = VOL_economy_level_2 }
+		remove_ideas = VOL_economy_level_2
+		add_ideas = VOL_economy_level_1
+		}
+		else_if = {
+		limit = { has_idea = VOL_economy_level_1 }
+		remove_ideas = VOL_economy_level_1
 		}
 	}
 }
@@ -513,6 +638,21 @@ focus = {
 				type = oil
 				amount = 4
 			}
+		}
+		# Improve economy from level 3 to 2 OR from level 2 to 1
+		if = {
+		limit = { has_idea = VOL_economy_level_3 }
+		remove_ideas = VOL_economy_level_3
+		add_ideas = VOL_economy_level_2
+		}
+		else_if = {
+		limit = { has_idea = VOL_economy_level_2 }
+		remove_ideas = VOL_economy_level_2
+		add_ideas = VOL_economy_level_1
+		}
+		else_if = {
+		limit = { has_idea = VOL_economy_level_1 }
+		remove_ideas = VOL_economy_level_1
 		}
 	}
 }
@@ -553,6 +693,21 @@ focus = {
 			traits = { trait_recon_expert commando }
 			skill = 2
 		}
+		# Improve army from level 3 to 2 OR from level 2 to 1
+		if = {
+		limit = { has_idea = VOL_army_level_3 }
+		remove_ideas = VOL_army_level_3
+		add_ideas = VOL_army_level_2
+		}
+		else_if = {
+		limit = { has_idea = VOL_army_level_2 }
+		remove_ideas = VOL_army_level_2
+		add_ideas = VOL_army_level_1
+		}
+		else_if = {
+		limit = { has_idea = VOL_army_level_1 }
+		remove_ideas = VOL_army_level_1
+		}
 	}
 }
 
@@ -568,7 +723,22 @@ focus = {
 		add_tech_bonus = {
 			name = armor_bonus
 			ahead_reduction = 1
-			category = armor
+			technology = { cat_armor motorized_equipment }
+		}
+		# Improve army from level 3 to 2 OR from level 2 to 1
+		if = {
+		limit = { has_idea = VOL_army_level_3 }
+		remove_ideas = VOL_army_level_3
+		add_ideas = VOL_army_level_2
+		}
+		else_if = {
+		limit = { has_idea = VOL_army_level_2 }
+		remove_ideas = VOL_army_level_2
+		add_ideas = VOL_army_level_1
+		}
+		else_if = {
+		limit = { has_idea = VOL_army_level_1 }
+		remove_ideas = VOL_army_level_1
 		}
 	}
 }
@@ -585,9 +755,24 @@ focus = {
 		add_tech_bonus = {
 			name = air_bonus
 			ahead_reduction = 1
-			category = air_doctrine
+			technology = { air_doctrine light_fighter medium_plane }
 		}
 		air_experience = 25
+		# Improve army from level 3 to 2 OR from level 2 to 1
+		if = {
+		limit = { has_idea = VOL_army_level_3 }
+		remove_ideas = VOL_army_level_3
+		add_ideas = VOL_army_level_2
+		}
+		else_if = {
+		limit = { has_idea = VOL_army_level_2 }
+		remove_ideas = VOL_army_level_2
+		add_ideas = VOL_army_level_1
+		}
+		else_if = {
+		limit = { has_idea = VOL_army_level_1 }
+		remove_ideas = VOL_army_level_1
+		}
 	}
 }
 

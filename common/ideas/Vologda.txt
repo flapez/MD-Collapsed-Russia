@@ -1,7 +1,8 @@
 ideas = {
 	country = {
-		# Starting ideas - Economic problems
-		VOL_destroyed_economy = {
+		# ==================== ЭКОНОМИЧЕСКИЕ СОСТОЯНИЯ ====================
+		# Уровень 3 - Разрушенная экономика
+		VOL_economy_level_3 = {
 			picture = generic_depression
 			
 			allowed = {
@@ -11,14 +12,57 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			
 			modifier = {
-				consumer_goods_factor = 0.15
-				industrial_capacity_factory = -0.15
-				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.20
+				production_speed_buildings_factor = -0.15
+				stability_factor = -0.10
+				political_power_factor = -0.10
 			}
 		}
 		
-		# Starting ideas - Military problems
-		VOL_disorganized_military = {
+		# Уровень 2 - Слабая экономика
+		VOL_economy_level_2 = {
+			name = VOL_economy_level_3
+			picture = generic_depression
+			
+			allowed = {
+				original_tag = VOL
+			}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				consumer_goods_factor = 0.12
+				industrial_capacity_factory = -0.12
+				production_speed_buildings_factor = -0.08
+				stability_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+		
+		# Уровень 1 - Восстанавливающаяся экономика
+		VOL_economy_level_1 = {
+			name = VOL_economy_level_3
+			picture = generic_depression
+			
+			allowed = {
+				original_tag = VOL
+			}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				consumer_goods_factor = 0.06
+				industrial_capacity_factory = -0.06
+				production_speed_buildings_factor = -0.04
+			}
+		}
+		
+		# Уровень 0 - Нормальная экономика (нет идеи)
+		
+		# ==================== ВОЕННЫЕ СОСТОЯНИЯ ====================
+		# Уровень 3 - Разрушенная армия
+		VOL_army_level_3 = {
 			picture = generic_disorganized_army
 			
 			allowed = {
@@ -28,9 +72,88 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			
 			modifier = {
-				army_org_factor = -0.15
-				experience_gain_army_factor = -0.10
+				army_org_factor = -0.20
+				army_morale_factor = -0.15
+				experience_gain_army_factor = -0.15
+				war_support_factor = -0.10
+				training_time_factor = 0.15
+			}
+		}
+		
+		# Уровень 2 - Слабая армия
+		VOL_army_level_2 = {
+			name = VOL_army_level_3
+			picture = generic_disorganized_army
+			
+			allowed = {
+				original_tag = VOL
+			}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				army_org_factor = -0.12
+				army_morale_factor = -0.08
+				experience_gain_army_factor = -0.08
 				war_support_factor = -0.05
+				training_time_factor = 0.08
+			}
+		}
+		
+		# Уровень 1 - Восстанавливающаяся армия
+		VOL_army_level_1 = {
+			name = VOL_army_level_3
+			picture = generic_disorganized_army
+			
+			allowed = {
+				original_tag = VOL
+			}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				army_org_factor = -0.05
+				army_morale_factor = -0.04
+				experience_gain_army_factor = -0.04
+			}
+		}
+		
+		# Уровень 0 - Нормальная армия (нет идеи)
+		
+		# ==================== СТАРТОВЫЕ ИДЕИ ====================
+		VOL_starting_economy = {
+			picture = generic_depression
+			
+			allowed = {
+				original_tag = VOL
+			}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.20
+				production_speed_buildings_factor = -0.15
+				stability_factor = -0.10
+				political_power_factor = -0.10
+			}
+		}
+		
+		VOL_starting_military = {
+			picture = generic_disorganized_army
+			
+			allowed = {
+				original_tag = VOL
+			}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				army_org_factor = -0.20
+				army_morale_factor = -0.15
+				experience_gain_army_factor = -0.15
+				war_support_factor = -0.10
+				training_time_factor = 0.15
 			}
 		}
 		
