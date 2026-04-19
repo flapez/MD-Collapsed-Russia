@@ -56,6 +56,12 @@
  VOL_political_stability: "Политическая стабильность"
  VOL_political_stability_desc: "Достичь прочной политической стабильности"
  
+ # Ideas - Starting problems
+ VOL_destroyed_economy: "Разрушенная экономика"
+ VOL_destroyed_economy_desc: "Наша экономика находится в глубоком кризисе после распада СССР"
+ VOL_disorganized_military: "Дезорганизованная армия"
+ VOL_disorganized_military_desc: "Наши вооружённые силы страдают от недостатка организации и финансирования"
+ 
  # Ideas - Economic
  VOL_agriculture_boost: "Подъём сельского хозяйства"
  VOL_agriculture_boost_desc: "Наш сельскохозяйственный сектор процветает"
