@@ -1,5 +1,6 @@
 l_english:
  VOL_tree: "Vologda Focus Tree"
+ VOL_tree_desc: "National focus tree for Vologda Oblast"
  VOL_restore_budget: "Restore Budget"
  VOL_restore_budget_desc: "Stabilize the region's financial system after economic collapse"
  VOL_recovery_plan: "Recovery Plan"
