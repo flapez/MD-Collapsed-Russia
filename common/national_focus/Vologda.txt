@@ -62,7 +62,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = industrial_bonus
 				ahead_reduction = 1
-				technology = { dispersed_industry }
+				category = industry
 			}
 		}
 	}
@@ -90,9 +90,9 @@ focus_tree = {
 		cost = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_trade_opinion_modifier = {
-				who = ROOT
-				opinion = 25
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = improved_relations
 				days = 365
 			}
 		}
@@ -177,7 +177,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = infantry_bonus
 				ahead_reduction = 1
-				technology = { infantry_weapons infantry_weapons2 }
+				category = infantry_weapons
 			}
 		}
 	}
@@ -225,7 +225,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = artillery_bonus
 				ahead_reduction = 1
-				technology = { artillery1 artillery2 }
+				category = artillery
 			}
 		}
 	}
@@ -242,7 +242,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = motorized_bonus
 				ahead_reduction = 1
-				technology = { motorized_infantry mechanized_infantry }
+				category = motorized
 			}
 		}
 	}

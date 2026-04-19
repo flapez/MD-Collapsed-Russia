@@ -44,6 +44,10 @@ capital = 646
 		orthodox_christian
 		western_country
 		medium_far_right_movement
+
+		# Vologda Specific
+		VOL_destroyed_economy
+		VOL_disorganized_military
 }
 	}
 
