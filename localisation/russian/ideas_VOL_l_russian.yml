@@ -1,5 +1,7 @@
 ﻿l_russian:
  # Ideas - Economic Problems
+ VOL_destroyed_economy: "Разрушенная экономика"
+ VOL_destroyed_economy_desc: "Наша экономика находится в глубоком кризисе после распада СССР"
  vol_destroyed_economy_5start: "Полностью разрушенная экономика"
  vol_destroyed_economy_5start_desc: "Региональная экономика в полном упадке после распада СССР"
  vol_destroyed_economy_5: "Разрушенная экономика"
@@ -12,6 +14,8 @@
  vol_destroyed_economy_2_desc: "Экономика показывает признаки восстановления"
  
  # Ideas - Military Problems
+ VOL_disorganized_military: "Дезорганизованная армия"
+ VOL_disorganized_military_desc: "Наши вооружённые силы страдают от недостатка организации и финансирования"
  vol_disorganized_military_5start: "Полная дезорганизация армии"
  vol_disorganized_military_5start_desc: "Вооружённые силы в полном беспорядке после распада СССР"
  vol_disorganized_military_5: "Дезорганизованная армия"
@@ -26,6 +30,10 @@
  vol_disorganized_military_1_desc: "Армия близка к завершению реформ"
  
  # Economic Ideas
+ VOL_agriculture_boost: "Подъём сельского хозяйства"
+ VOL_agriculture_boost_desc: "Наш сельскохозяйственный сектор процветает"
+ VOL_economic_independence_idea: "Экономическая независимость"
+ VOL_economic_independence_idea_desc: "Вологда достигает экономической самодостаточности"
  vol_severstal_hegemony: "Гегемония Северстали"
  vol_severstal_hegemony_desc: "Доминирование сталелитейной компании Северсталь в региональной экономике"
  vol_white_sea_access: "Доступ к Белому морю"
@@ -35,7 +43,29 @@
  vol_planned_economy_north: "Северная плановая экономика"
  vol_planned_economy_north_desc: "Централизованная плановая экономика северного региона"
  
+ # Military Ideas
+ VOL_officer_corps_idea: "Офицерский корпус"
+ VOL_officer_corps_idea_desc: "Профессиональный офицерский состав укрепляет нашу армию"
+ VOL_military_strength_idea: "Военная мощь"
+ VOL_military_strength_idea_desc: "Наши вооружённые силы готовы к любым вызовам"
+ 
  # Political Ideas
+ VOL_democratic_reforms: "Демократические реформы"
+ VOL_democratic_reforms_desc: "Демократические институты укрепляют наше общество"
+ VOL_authoritarian_reforms: "Авторитарные реформы"
+ VOL_authoritarian_reforms_desc: "Сильная центральная власть приносит порядок"
+ VOL_communist_reforms: "Коммунистические реформы"
+ VOL_communist_reforms_desc: "Социалистические принципы направляют наше развитие"
+ VOL_workers_rights_idea: "Права рабочих"
+ VOL_workers_rights_idea_desc: "Рабочие пользуются расширенными правами и защитой"
+ VOL_political_stability_idea: "Политическая стабильность"
+ VOL_political_stability_idea_desc: "Достигнута прочная политическая стабильность"
+ VOL_war_goal_archangel: "Цель войны: Архангельск"
+ VOL_war_goal_archangel_desc: "Стремление вернуть Архангельск"
+ VOL_war_goal_yaroslavl: "Цель войны: Ярославль"
+ VOL_war_goal_yaroslavl_desc: "Стремление установить контроль над Ярославлем"
+ VOL_war_goal_kostroma: "Цель войны: Кострома"
+ VOL_war_goal_kostroma_desc: "Стремление включить Кострому в состав нашего государства"
  vol_soviet_nostalgia: "Советская ностальгия"
  vol_soviet_nostalgia_desc: "Ностальгия по советским временам среди населения"
  vol_democratic_reforms: "Демократические реформы"

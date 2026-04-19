@@ -56,6 +56,42 @@
  VOL_political_stability: "Политическая стабильность"
  VOL_political_stability_desc: "Достичь прочной политической стабильности"
  
+ # War Goals
+ VOL_claim_archangel: "Претензия на Архангельск"
+ VOL_claim_archangel_desc: "Вернуть Архангельск под наш контроль"
+ VOL_claim_yaroslavl: "Претензия на Ярославль"
+ VOL_claim_yaroslavl_desc: "Установить контроль над Ярославлем"
+ VOL_claim_kostroma: "Претензия на Кострому"
+ VOL_claim_kostroma_desc: "Включить Кострому в состав нашего государства"
+ 
+ # Additional Economic Focuses
+ VOL_small_business_support: "Поддержка малого бизнеса"
+ VOL_small_business_support_desc: "Стимулировать развитие малого и среднего предпринимательства"
+ VOL_technological_innovation: "Технологические инновации"
+ VOL_technological_innovation_desc: "Инвестировать в современные технологии и исследования"
+ VOL_resource_extraction: "Добыча ресурсов"
+ VOL_resource_extraction_desc: "Развивать добычу природных ресурсов в регионе"
+ VOL_economic_miracle: "Экономическое чудо"
+ VOL_economic_miracle_desc: "Достичь невероятного экономического роста"
+ 
+ # Additional Military Focuses
+ VOL_special_forces: "Силы специального назначения"
+ VOL_special_forces_desc: "Создать элитные подразделения специального назначения"
+ VOL_armor_development: "Развитие бронетанковых войск"
+ VOL_armor_development_desc: "Модернизировать наши танковые соединения"
+ VOL_air_support: "Авиационная поддержка"
+ VOL_air_support_desc: "Развивать военно-воздушные силы для поддержки армии"
+ VOL_military_industrial_complex: "Военно-промышленный комплекс"
+ VOL_military_industrial_complex_desc: "Расширить производство вооружений и военной техники"
+ 
+ # Additional Political Focuses
+ VOL_anti_corruption: "Борьба с коррупцией"
+ VOL_anti_corruption_desc: "Искоренить коррупцию в государственных органах"
+ VOL_national_unity: "Национальное единство"
+ VOL_national_unity_desc: "Объединить народ вокруг общих целей"
+ VOL_foreign_alliances: "Внешние союзы"
+ VOL_foreign_alliances_desc: "Установить прочные союзнические отношения с другими странами"
+ 
  # Ideas - Starting problems
  VOL_destroyed_economy: "Разрушенная экономика"
  VOL_destroyed_economy_desc: "Наша экономика находится в глубоком кризисе после распада СССР"

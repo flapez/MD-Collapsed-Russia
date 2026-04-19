@@ -1,5 +1,7 @@
 ﻿l_english:
  # Ideas - Economic Problems
+ VOL_destroyed_economy: "Destroyed Economy"
+ VOL_destroyed_economy_desc: "Our economy is in deep crisis after the collapse of the USSR"
  vol_destroyed_economy_5start: "Completely Destroyed Economy"
  vol_destroyed_economy_5start_desc: "Regional economy in complete collapse after the USSR dissolution"
  vol_destroyed_economy_5: "Destroyed Economy"
@@ -12,6 +14,8 @@
  vol_destroyed_economy_2_desc: "Economy showing signs of recovery"
  
  # Ideas - Military Problems
+ VOL_disorganized_military: "Disorganized Military"
+ VOL_disorganized_military_desc: "Our armed forces suffer from lack of organization and funding"
  vol_disorganized_military_5start: "Complete Army Disorganization"
  vol_disorganized_military_5start_desc: "Armed forces in complete disarray after Soviet collapse"
  vol_disorganized_military_5: "Disorganized Army"
@@ -26,6 +30,10 @@
  vol_disorganized_military_1_desc: "Army close to completing reforms"
  
  # Economic Ideas
+ VOL_agriculture_boost: "Agriculture Boost"
+ VOL_agriculture_boost_desc: "Our agricultural sector is thriving"
+ VOL_economic_independence_idea: "Economic Independence"
+ VOL_economic_independence_idea_desc: "Vologda achieves economic self-sufficiency"
  vol_severstal_hegemony: "Severstal Hegemony"
  vol_severstal_hegemony_desc: "Dominance of Severstal steel company in regional economy"
  vol_white_sea_access: "White Sea Access"
@@ -35,7 +43,29 @@
  vol_planned_economy_north: "Northern Planned Economy"
  vol_planned_economy_north_desc: "Centralized planned economy of northern region"
  
+ # Military Ideas
+ VOL_officer_corps_idea: "Officer Corps"
+ VOL_officer_corps_idea_desc: "Professional officer cadre strengthens our military"
+ VOL_military_strength_idea: "Military Strength"
+ VOL_military_strength_idea_desc: "Our armed forces are ready for any challenge"
+ 
  # Political Ideas
+ VOL_democratic_reforms: "Democratic Reforms"
+ VOL_democratic_reforms_desc: "Democratic institutions strengthen our society"
+ VOL_authoritarian_reforms: "Authoritarian Reforms"
+ VOL_authoritarian_reforms_desc: "Strong central authority brings order"
+ VOL_communist_reforms: "Communist Reforms"
+ VOL_communist_reforms_desc: "Socialist principles guide our development"
+ VOL_workers_rights_idea: "Workers Rights"
+ VOL_workers_rights_idea_desc: "Workers enjoy expanded rights and protections"
+ VOL_political_stability_idea: "Political Stability"
+ VOL_political_stability_idea_desc: "Lasting political stability achieved"
+ VOL_war_goal_archangel: "War Goal: Archangel"
+ VOL_war_goal_archangel_desc: "Drive to reclaim Archangel"
+ VOL_war_goal_yaroslavl: "War Goal: Yaroslavl"
+ VOL_war_goal_yaroslavl_desc: "Drive to establish control over Yaroslavl"
+ VOL_war_goal_kostroma: "War Goal: Kostroma"
+ VOL_war_goal_kostroma_desc: "Drive to include Kostroma in our state"
  vol_soviet_nostalgia: "Soviet Nostalgia"
  vol_soviet_nostalgia_desc: "Nostalgia for Soviet times among population"
  vol_democratic_reforms: "Democratic Reforms"
