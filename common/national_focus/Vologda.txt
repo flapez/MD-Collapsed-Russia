@@ -62,7 +62,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = industrial_bonus
 				ahead_reduction = 1
-				technology = { concentrated_industry dispersed_industry }
+				technology = { dispersed_industry }
 			}
 		}
 	}
