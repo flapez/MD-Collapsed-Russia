@@ -1,305 +1,155 @@
 ideas = {
-country = {
-vol_destroyed_economy_5start = {
-name = vol_destroyed_economy_5start
-picture = GFX_idea_generic_depressed_economy
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
 
-modifier = {
-industrial_capacity_factory = -0.45
-production_speed_industrial_complex_factor = -0.6
-consumer_goods_factor = 0.5
-stability_factor = -0.22
-political_power_factor = -0.17
-}
-}
-
-vol_destroyed_economy_5 = {
-name = vol_destroyed_economy_5
-picture = GFX_idea_generic_depressed_economy
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-industrial_capacity_factory = -0.40
-production_speed_industrial_complex_factor = -0.40
-consumer_goods_factor = 0.40
-stability_factor = -0.20
-political_power_factor = -0.15
-}
-}
-
-vol_destroyed_economy_4 = {
-name = vol_destroyed_economy_4
-picture = GFX_idea_generic_depressed_economy
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-industrial_capacity_factory = -0.30
-production_speed_industrial_complex_factor = -0.30
-consumer_goods_factor = 0.30
-stability_factor = -0.15
-political_power_factor = -0.10
-}
-}
-
-vol_destroyed_economy_3 = {
-name = vol_destroyed_economy_3
-picture = GFX_idea_generic_depressed_economy
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-industrial_capacity_factory = -0.20
-production_speed_industrial_complex_factor = -0.20
-consumer_goods_factor = 0.20
-stability_factor = -0.10
-}
-}
-
-vol_destroyed_economy_2 = {
-name = vol_destroyed_economy_2
-picture = GFX_idea_generic_depressed_economy
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-industrial_capacity_factory = -0.10
-production_speed_industrial_complex_factor = -0.10
-consumer_goods_factor = 0.10
-}
-}
-
-vol_disorganized_military_5start = {
-name = vol_disorganized_military_5start
-picture = GFX_idea_generic_disorganized_army
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-army_org_factor = -0.85
-army_attack_factor = -1
-army_defence_factor = -0.95
-experience_gain_army_factor = -0.55
-war_support_factor = -0.35
-conscription_factor = -0.55
-}
-}
-
-vol_disorganized_military_5 = {
-name = vol_disorganized_military_5
-picture = GFX_idea_generic_disorganized_army
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-army_org_factor = -0.8
-army_attack_factor = -1
-army_defence_factor = -0.9
-experience_gain_army_factor = -0.5
-war_support_factor = -0.30
-conscription_factor = -0.50
-}
-}
-
-vol_disorganized_military_4 = {
-name = vol_disorganized_military_4
-picture = GFX_idea_generic_disorganized_army
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-army_org_factor = -0.65
-army_attack_factor = -0.8
-army_defence_factor = -0.75
-experience_gain_army_factor = -0.45
-war_support_factor = -0.2
-conscription_factor = -0.45
-}
-}
-
-vol_disorganized_military_3 = {
-name = vol_disorganized_military_3
-picture = GFX_idea_generic_army_org_2
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-army_org_factor = -0.5
-army_attack_factor = -0.6
-army_defence_factor = -0.6
-experience_gain_army_factor = -0.3
-war_support_factor = -0.1
-conscription_factor = -0.3
-}
-}
-
-vol_disorganized_military_2 = {
-name = vol_disorganized_military_2
-picture = GFX_idea_generic_army_org_3
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-army_org_factor = -0.25
-army_attack_factor = -0.2
-army_defence_factor = -0.15
-experience_gain_army_factor = -0.1
-conscription_factor = -0.1
-}
-}
-
-vol_disorganized_military_1 = {
-name = vol_disorganized_military_1
-picture = GFX_idea_generic_army_org_3
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-army_attack_factor = -0.01
-army_defence_factor = -0.01
-experience_gain_army_factor = -0.01
-}
-}
-
-vol_severstal_hegemony = {
-name = VOL_severstal_hegemony
-picture = GFX_idea_generic_production_bonus
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-modifier = {
-industrial_capacity_factory = 0.10
-production_speed_arms_factory_factor = 0.15
-local_resources_factor = 0.10
-trade_opinion_factor = 0.10
-}
-}
-
-vol_white_sea_access = {
-name = VOL_white_sea_access
-picture = GFX_idea_generic_naval_doctrine
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-modifier = {
-supply_consumption_factor = -0.05
-local_resources_factor = 0.05
-}
-}
-
-vol_soviet_nostalgia = {
-name = vol_soviet_nostalgia
-picture = GFX_idea_generic_communism
-allowed = { original_tag = VOL }
-allowed_civil_war = { has_government = communism }
-
-modifier = {
-stability_factor = 0.05
-industrial_capacity_factory = 0.05
-communism_drift = 0.02
-war_support_factor = 0.05
-}
-}
-
-vol_planned_economy_north = {
-name = vol_planned_economy_north
-picture = GFX_idea_generic_central_management
-allowed = { original_tag = VOL }
-allowed_civil_war = { has_government = communism }
-
-modifier = {
-industrial_capacity_factory = 0.10
-production_speed_industrial_complex_factor = 0.10
-production_speed_arms_factory_factor = 0.10
-consumer_goods_factor = -0.05
-stability_factor = 0.05
-}
-}
-
-vol_democratic_reforms = {
-name = vol_democratic_reforms
-picture = GFX_idea_generic_democracy
-allowed = { original_tag = VOL }
-allowed_civil_war = { has_government = democratic }
-
-modifier = {
-stability_factor = 0.05
-political_power_factor = 0.05
-democratic_drift = 0.02
-improve_relations_maintain_cost_factor = -0.10
-}
-}
-
-vol_national_awakening = {
-name = vol_national_awakening
-picture = GFX_idea_generic_nationalist
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-stability_factor = 0.05
-war_support_factor = 0.05
-nationalist_drift = 0.02
-conscription_factor = 0.05
-}
-}
-
-vol_cultural_revival = {
-name = vol_cultural_revival
-picture = GFX_idea_generic_culture
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-stability_factor = 0.10
-war_support_factor = 0.05
-neutrality_drift = 0.01
-political_power_factor = 0.05
-}
-}
-
-vol_authoritarian_governance = {
-name = vol_authoritarian_governance
-picture = GFX_idea_generic_authoritarianism
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-allowed_civil_war = { always = yes }
-modifier = {
-political_power_factor = 0.10
-stability_factor = 0.05
-war_support_factor = 0.05
-democratic_drift = -0.02
-}
-}
-
-vol_oligarch_control = {
-name = vol_oligarch_control
-picture = GFX_idea_generic_oligarchy
-allowed = { original_tag = VOL }
-allowed_civil_war = { has_government = neutrality }
-
-modifier = {
-industrial_capacity_factory = 0.10
-production_speed_industrial_complex_factor = 0.10
-political_power_factor = -0.10
-stability_factor = -0.05
-consumer_goods_factor = 0.05
-neutrality_drift = 0.02
-}
-}
-
-vol_resource_extraction = {
-name = vol_resource_extraction
-picture = GFX_idea_generic_fuel_refinery
-allowed = { original_tag = VOL }
-allowed_civil_war = { always = yes }
-
-modifier = {
-local_resources_factor = 0.15
-production_speed_industrial_complex_factor = 0.05
-fuel_gain_factor = 0.05
-}
-}
-}
+	# Экономические идеи
+	VOL_agriculture_boost = {
+		picture = generic_agrarian_society
+		
+		allowed = {
+			original_tag = VOL
+		}
+		
+		allowed_civil_war = { always = yes }
+		
+		modifier = {
+			consumer_goods_factor = -0.05
+			production_speed_buildings_factor = 0.05
+		}
+	}
+	
+	VOL_economic_independence_idea = {
+		picture = generic_foreign_capital
+		
+		allowed = {
+			original_tag = VOL
+		}
+		
+		allowed_civil_war = { always = yes }
+		
+		modifier = {
+			trade_opinion_factor = 0.15
+			industrial_capacity_factory = 0.05
+			production_lack_of_resource_penalty_factor = -0.1
+		}
+	}
+	
+	# Военные идеи
+	VOL_officer_corps_idea = {
+		picture = generic_army_chief_old
+		
+		allowed = {
+			original_tag = VOL
+		}
+		
+		allowed_civil_war = { always = yes }
+		
+		modifier = {
+			army_org_factor = 0.05
+			experience_gain_army_factor = 0.1
+		}
+	}
+	
+	VOL_military_strength_idea = {
+		picture = generic_manpower_bonus
+		
+		allowed = {
+			original_tag = VOL
+		}
+		
+		allowed_civil_war = { always = yes }
+		
+		modifier = {
+			war_support_factor = 0.1
+			army_morale_factor = 0.05
+			special_forces_out_of_cap_factor = 0.1
+		}
+	}
+	
+	# Политические идеи
+	VOL_democratic_reforms = {
+		picture = generic_democracy2
+		
+		allowed = {
+			original_tag = VOL
+		}
+		
+		allowed_civil_war = { 
+			has_government = democratic
+		}
+		
+		modifier = {
+			democratic_drift = 0.1
+			stability_factor = 0.05
+			political_power_factor = 0.05
+		}
+	}
+	
+	VOL_authoritarian_reforms = {
+		picture = generic_authoritarianism
+		
+		allowed = {
+			original_tag = VOL
+		}
+		
+		allowed_civil_war = { 
+			has_government = neutrality
+		}
+		
+		modifier = {
+			neutrality_drift = 0.1
+			war_support_factor = 0.05
+			political_power_factor = 0.1
+		}
+	}
+	
+	VOL_communist_reforms = {
+		picture = generic_communism3
+		
+		allowed = {
+			original_tag = VOL
+		}
+		
+		allowed_civil_war = { 
+			has_government = communism
+		}
+		
+		modifier = {
+			communism_drift = 0.1
+			stability_factor = 0.05
+			industrial_capacity_factory = 0.05
+		}
+	}
+	
+	VOL_workers_rights_idea = {
+		picture = generic_production_bonus
+		
+		allowed = {
+			original_tag = VOL
+		}
+		
+		allowed_civil_war = { 
+			has_government = communism
+		}
+		
+		modifier = {
+			stability_factor = 0.05
+			production_speed_buildings_factor = 0.05
+			consumer_goods_factor = -0.03
+		}
+	}
+	
+	VOL_political_stability_idea = {
+		picture = generic_peaceful_protests
+		
+		allowed = {
+			original_tag = VOL
+		}
+		
+		allowed_civil_war = { always = yes }
+		
+		modifier = {
+			stability_factor = 0.15
+			political_power_factor = 0.1
+			war_support_factor = 0.05
+		}
+	}
 }
