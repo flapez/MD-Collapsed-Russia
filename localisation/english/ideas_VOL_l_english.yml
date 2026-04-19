@@ -1,0 +1,58 @@
+l_english:
+ # Ideas - Economic Problems
+ vol_destroyed_economy_5start: "Completely Destroyed Economy"
+ vol_destroyed_economy_5start_desc: "Regional economy in complete collapse after the USSR dissolution"
+ vol_destroyed_economy_5: "Destroyed Economy"
+ vol_destroyed_economy_5_desc: "Regional economy severely damaged, recovery needed"
+ vol_destroyed_economy_4: "Heavily Damaged Economy"
+ vol_destroyed_economy_4_desc: "Economy beginning slow recovery process"
+ vol_destroyed_economy_3: "Damaged Economy"
+ vol_destroyed_economy_3_desc: "Recovery process continues but challenges remain"
+ vol_destroyed_economy_2: "Weakened Economy"
+ vol_destroyed_economy_2_desc: "Economy showing signs of recovery"
+ 
+ # Ideas - Military Problems
+ vol_disorganized_military_5start: "Complete Army Disorganization"
+ vol_disorganized_military_5start_desc: "Armed forces in complete disarray after Soviet collapse"
+ vol_disorganized_military_5: "Disorganized Army"
+ vol_disorganized_military_5_desc: "Army severely disorganized and ineffective"
+ vol_disorganized_military_4: "Heavily Disorganized Army"
+ vol_disorganized_military_4_desc: "Beginning of armed forces reform"
+ vol_disorganized_military_3: "Disorganized Army"
+ vol_disorganized_military_3_desc: "Reorganization process continues"
+ vol_disorganized_military_2: "Reforming Army"
+ vol_disorganized_military_2_desc: "Army undergoing reform process"
+ vol_disorganized_military_1: "Almost Reformed Army"
+ vol_disorganized_military_1_desc: "Army close to completing reforms"
+ 
+ # Economic Ideas
+ vol_severstal_hegemony: "Severstal Hegemony"
+ vol_severstal_hegemony_desc: "Dominance of Severstal steel company in regional economy"
+ vol_white_sea_access: "White Sea Access"
+ vol_white_sea_access_desc: "Access to White Sea trade routes via Belomorkanal"
+ vol_resource_extraction: "Resource Extraction"
+ vol_resource_extraction_desc: "Intensive natural resource extraction program"
+ vol_planned_economy_north: "Northern Planned Economy"
+ vol_planned_economy_north_desc: "Centralized planned economy of northern region"
+ 
+ # Political Ideas
+ vol_soviet_nostalgia: "Soviet Nostalgia"
+ vol_soviet_nostalgia_desc: "Nostalgia for Soviet times among population"
+ vol_democratic_reforms: "Democratic Reforms"
+ vol_democratic_reforms_desc: "Implementation of democratic reforms and institutions"
+ vol_national_awakening: "National Awakening"
+ vol_national_awakening_desc: "Awakening of Russian national consciousness"
+ vol_cultural_revival: "Cultural Revival"
+ vol_cultural_revival_desc: "Revival of Russian cultural traditions and heritage"
+ vol_authoritarian_governance: "Authoritarian Governance"
+ vol_authoritarian_governance_desc: "Strict authoritarian management system"
+ vol_oligarch_control: "Oligarch Control"
+ vol_oligarch_control_desc: "Economy controlled by oligarchic business groups"
+ 
+ # Country
+ VOL: "Vologda"
+ VOL_long: "Vologda Oblast"
+ 
+ # Leader
+ Georgiy_Filimonov: "Georgiy Filimonov"
+ Georgiy_Filimonov_desc: "Leader of Vologda Oblast"
