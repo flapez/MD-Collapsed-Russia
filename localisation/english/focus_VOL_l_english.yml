@@ -56,6 +56,12 @@ l_english:
  VOL_political_stability: "Political Stability"
  VOL_political_stability_desc: "Achieve lasting political stability"
  
+ # Ideas - Starting problems
+ VOL_destroyed_economy: "Destroyed Economy"
+ VOL_destroyed_economy_desc: "Our economy is in deep crisis after the collapse of the USSR"
+ VOL_disorganized_military: "Disorganized Military"
+ VOL_disorganized_military_desc: "Our armed forces suffer from lack of organization and funding"
+ 
  # Ideas - Economic
  VOL_agriculture_boost: "Agriculture Boost"
  VOL_agriculture_boost_desc: "Our agricultural sector is thriving"
