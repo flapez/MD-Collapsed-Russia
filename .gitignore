@@ -1,31 +1,27 @@
+```
 # Compiled and build artifacts
 *.pyc
 __pycache__/
-*.class
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
+
+# Dependencies
+.venv/
+venv/
+node_modules/
 dist/
 build/
 target/
-
-# Dependencies
-node_modules/
-venv/
-.venv/
-.env
-.env.local
-*.env.*
+.gradle/
 
 # Logs and temp files
 *.log
 *.tmp
 *.swp
 *.swo
+
+# Environment
+.env
+.env.local
+*.env.*
 
 # Editors
 .vscode/
@@ -45,12 +41,17 @@ htmlcov/
 # Python specific
 *.pyc
 __pycache__/
-.mypy_cache/
-.pytest_cache/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+.eggs/
 
-# Java specific
-.gradle/
-target/
+# Testing
+.pytest_cache/
+.mypy_cache/
+.tox/
 
 # Compressed files
 *.zip
@@ -75,3 +76,4 @@ target/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+```
