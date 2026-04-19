@@ -1,0 +1,62 @@
+# Author: -flapez
+technologies = {
+
+    #X axis
+	@1965 = 0
+	@1970 = 2
+	@1975 = 4
+	@1980 = 6
+	@1985 = 8
+	@1990 = 10
+	@1995 = 12
+	@2000 = 14
+	@2005 = 16
+	@2010 = 18
+	@2015 = 20
+	@2020 = 22
+	@2025 = 24
+	@2030 = 26
+	@2035 = 28
+
+    #Y Axis
+	@row1 = -2
+	@row2 = 0
+	@row3 = 2
+	@row4 = 4
+	@row5 = 6
+	@row6 = 8
+	@row6half = 9
+	@row7 = 10
+
+    ###Support Equipment###
+
+    #1965
+	support_equipment = {
+
+		enable_equipments = {
+			support_equipment
+		}
+        
+		path = {
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1965
+		folder = {
+			name = infantry_folder
+			position = { x = @row1 y = @1965 }
+		}
+
+		categories = {
+			CAT_inf
+			CAT_inf_wep
+			CAT_Military
+		}
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}

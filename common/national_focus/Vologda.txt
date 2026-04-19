@@ -1,5 +1,3 @@
-# Vologda National Focus Tree
-
 focus_tree = {
 id = VOL_focuses
 
