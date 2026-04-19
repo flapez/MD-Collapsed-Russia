@@ -44,10 +44,6 @@ capital = 646
 		orthodox_christian
 		western_country
 		medium_far_right_movement
-
-		#Start
-		vol_destroyed_economy_5start
-		vol_disorganized_military_5start
 }
 	}
 
@@ -74,6 +70,7 @@ capital = 646
 		democratic = 0.45
 		communism = 0.25
 		neutrality = 0.00
+		fascism = 0.00
 		nationalist = 0.30
 	}
 	set_politics = {

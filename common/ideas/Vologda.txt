@@ -1,155 +1,157 @@
 ideas = {
 
-	# Экономические идеи
-	VOL_agriculture_boost = {
-		picture = generic_agrarian_society
-		
-		allowed = {
-			original_tag = VOL
-		}
-		
-		allowed_civil_war = { always = yes }
-		
-		modifier = {
-			consumer_goods_factor = -0.05
-			production_speed_buildings_factor = 0.05
-		}
-	}
-	
-	VOL_economic_independence_idea = {
-		picture = generic_foreign_capital
-		
-		allowed = {
-			original_tag = VOL
-		}
-		
-		allowed_civil_war = { always = yes }
-		
-		modifier = {
-			trade_opinion_factor = 0.15
-			industrial_capacity_factory = 0.05
-			production_lack_of_resource_penalty_factor = -0.1
-		}
-	}
-	
-	# Военные идеи
-	VOL_officer_corps_idea = {
-		picture = generic_army_chief_old
-		
-		allowed = {
-			original_tag = VOL
-		}
-		
-		allowed_civil_war = { always = yes }
-		
-		modifier = {
-			army_org_factor = 0.05
-			experience_gain_army_factor = 0.1
-		}
-	}
-	
-	VOL_military_strength_idea = {
-		picture = generic_manpower_bonus
-		
-		allowed = {
-			original_tag = VOL
-		}
-		
-		allowed_civil_war = { always = yes }
-		
-		modifier = {
-			war_support_factor = 0.1
-			army_morale_factor = 0.05
-			special_forces_out_of_cap_factor = 0.1
-		}
-	}
-	
-	# Политические идеи
-	VOL_democratic_reforms = {
-		picture = generic_democracy2
-		
-		allowed = {
-			original_tag = VOL
-		}
-		
-		allowed_civil_war = { 
-			has_government = democratic
-		}
-		
-		modifier = {
-			democratic_drift = 0.1
-			stability_factor = 0.05
-			political_power_factor = 0.05
-		}
-	}
-	
-	VOL_authoritarian_reforms = {
-		picture = generic_authoritarianism
-		
-		allowed = {
-			original_tag = VOL
-		}
-		
-		allowed_civil_war = { 
-			has_government = neutrality
-		}
-		
-		modifier = {
-			neutrality_drift = 0.1
-			war_support_factor = 0.05
-			political_power_factor = 0.1
-		}
-	}
-	
-	VOL_communist_reforms = {
-		picture = generic_communism3
-		
-		allowed = {
-			original_tag = VOL
-		}
-		
-		allowed_civil_war = { 
-			has_government = communism
-		}
-		
-		modifier = {
-			communism_drift = 0.1
-			stability_factor = 0.05
-			industrial_capacity_factory = 0.05
-		}
-	}
-	
-	VOL_workers_rights_idea = {
-		picture = generic_production_bonus
-		
-		allowed = {
-			original_tag = VOL
-		}
-		
-		allowed_civil_war = { 
-			has_government = communism
-		}
-		
-		modifier = {
-			stability_factor = 0.05
-			production_speed_buildings_factor = 0.05
-			consumer_goods_factor = -0.03
-		}
-	}
-	
-	VOL_political_stability_idea = {
-		picture = generic_peaceful_protests
-		
-		allowed = {
-			original_tag = VOL
-		}
-		
-		allowed_civil_war = { always = yes }
-		
-		modifier = {
-			stability_factor = 0.15
-			political_power_factor = 0.1
-			war_support_factor = 0.05
-		}
-	}
+country = {
+# Economic ideas
+VOL_agriculture_boost = {
+picture = generic_agrarian_society
+
+allowed = {
+original_tag = VOL
+}
+
+allowed_civil_war = { always = yes }
+
+modifier = {
+consumer_goods_factor = -0.05
+production_speed_buildings_factor = 0.05
+}
+}
+
+VOL_economic_independence_idea = {
+picture = generic_foreign_capital
+
+allowed = {
+original_tag = VOL
+}
+
+allowed_civil_war = { always = yes }
+
+modifier = {
+trade_opinion_factor = 0.15
+industrial_capacity_factory = 0.05
+production_lack_of_resource_penalty_factor = -0.1
+}
+}
+
+# Military ideas
+VOL_officer_corps_idea = {
+picture = generic_army_chief_old
+
+allowed = {
+original_tag = VOL
+}
+
+allowed_civil_war = { always = yes }
+
+modifier = {
+army_org_factor = 0.05
+experience_gain_army_factor = 0.1
+}
+}
+
+VOL_military_strength_idea = {
+picture = generic_manpower_bonus
+
+allowed = {
+original_tag = VOL
+}
+
+allowed_civil_war = { always = yes }
+
+modifier = {
+war_support_factor = 0.1
+army_morale_factor = 0.05
+special_forces_out_of_cap_factor = 0.1
+}
+}
+
+# Political ideas
+VOL_democratic_reforms = {
+picture = generic_democracy2
+
+allowed = {
+original_tag = VOL
+}
+
+allowed_civil_war = { 
+has_government = democratic
+}
+
+modifier = {
+democratic_drift = 0.1
+stability_factor = 0.05
+political_power_factor = 0.05
+}
+}
+
+VOL_authoritarian_reforms = {
+picture = generic_authoritarianism
+
+allowed = {
+original_tag = VOL
+}
+
+allowed_civil_war = { 
+has_government = neutrality
+}
+
+modifier = {
+neutrality_drift = 0.1
+war_support_factor = 0.05
+political_power_factor = 0.1
+}
+}
+
+VOL_communist_reforms = {
+picture = generic_communism3
+
+allowed = {
+original_tag = VOL
+}
+
+allowed_civil_war = { 
+has_government = communism
+}
+
+modifier = {
+communism_drift = 0.1
+stability_factor = 0.05
+industrial_capacity_factory = 0.05
+}
+}
+
+VOL_workers_rights_idea = {
+picture = generic_production_bonus
+
+allowed = {
+original_tag = VOL
+}
+
+allowed_civil_war = { 
+has_government = communism
+}
+
+modifier = {
+stability_factor = 0.05
+production_speed_buildings_factor = 0.05
+consumer_goods_factor = -0.03
+}
+}
+
+VOL_political_stability_idea = {
+picture = generic_peaceful_protests
+
+allowed = {
+original_tag = VOL
+}
+
+allowed_civil_war = { always = yes }
+
+modifier = {
+stability_factor = 0.15
+political_power_factor = 0.1
+war_support_factor = 0.05
+}
+}
+}
 }
